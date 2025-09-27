@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Quiz Interativo com JavaScript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="Teste seus conhecimentos com nosso quiz interativo sobre desenvolvimento web">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="quiz-app">
+        <!-- Tela Inicial -->
+        <div class="start-screen">
+            <div class="start-content">
+                <h1>🎯 Quiz de Conhecimentos</h1>
+                <p>Teste seus conhecimentos em desenvolvimento web com este quiz interativo!</p>
+                <ul class="features-list">
+                    <li>✅ 3 questões desafiadoras</li>
+                    <li>⏱️ Timer por questão</li>
+                    <li>📱 Totalmente responsivo</li>
+                    <li>🎨 Design moderno</li>
+                </ul>
+                <button id="start-button" class="pulse-button">Começar Quiz</button>
+            </div>
+        </div>
+
+        <!-- Container do Quiz -->
+        <div id="display-container" class="hide">
+            <div class="header">
+                <div class="number-of-count">
+                    <span class="number-of-question" aria-live="polite">1 de 3 Questões</span>
+                </div>
+                <div class="timer-div">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span class="time-left" aria-live="assertive">10s</span>
+                </div>
+            </div>
+            
+            <div class="quiz-content">
+                <div id="container" role="region" aria-label="Questão do quiz">
+                    <!-- As questões serão inseridas aqui via JavaScript -->
+                </div>
+                <button id="next-button" class="hide">Próxima Questão →</button>
+            </div>
+        </div>
+
+        <!-- Tela de Pontuação -->
+        <div class="score-container hide">
+            <div class="score-content">
+                <h2>🎉 Quiz Concluído!</h2>
+                <div id="user-score" role="status" aria-live="polite">Sua pontuação aparecerá aqui</div>
+                <div class="score-message" id="score-message"></div>
+                <button id="restart">↻ Jogar Novamente</button>
+            </div>
+        </div>
+    </div>
+
+    <script src='script.js'></script>
+</body>
+</html>
